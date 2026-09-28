@@ -4,6 +4,7 @@ import com.google.common.io.Resources;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.rakib.beans.Car;
+import com.rakib.beans.Order;
 import com.rakib.beans.Person;
 import org.apache.commons.io.IOUtils;
 
@@ -12,11 +13,14 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MockData {
+    private MockData() {
+        /* This utility class should not be instantiated */
+    }
+
     public static List<Person> getPeople() throws IOException {
         InputStream inputStream = Resources.getResource("people.json").openStream();
         String json = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
@@ -63,6 +67,16 @@ public class MockData {
                 new CityEmployee("Michael Brown", 7000, "Chicago", 20),
                 new CityEmployee("Alice Johnson", 92000, "San Francisco", 15),
                 new CityEmployee("David Miller", 55000, "Houston", 18)
+        );
+    }
+
+    public static List<Order> orders() {
+        return List.of(
+                new Order("1", "Vendor A", 10),
+                new Order("2", "Vendor B", 5),
+                new Order("3", "Vendor A", 8),
+                new Order("4", "Vendor C", 12),
+                new Order("5", "Vendor B", 7)
         );
     }
 }

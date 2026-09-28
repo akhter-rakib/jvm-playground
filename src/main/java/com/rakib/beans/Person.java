@@ -1,5 +1,8 @@
 package com.rakib.beans;
 
+import lombok.Getter;
+
+@Getter
 public class Person {
 
     private final Integer id;
@@ -21,30 +24,6 @@ public class Person {
         this.email = email;
         this.gender = gender;
         this.age = age;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public Integer getAge() {
-        return age;
     }
 
     @Override

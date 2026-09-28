@@ -1,5 +1,8 @@
 package com.rakib.beans;
 
+import lombok.Getter;
+
+@Getter
 public class PersonDTO {
 
     private final Integer id;
@@ -10,18 +13,6 @@ public class PersonDTO {
         this.id = id;
         this.name = name;
         this.age = age;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
     }
 
 

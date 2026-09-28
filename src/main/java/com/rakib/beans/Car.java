@@ -1,5 +1,8 @@
 package com.rakib.beans;
 
+import lombok.Getter;
+
+@Getter
 public class Car {
 
     private final Integer id;
@@ -22,30 +25,6 @@ public class Car {
         this.color = color;
         this.year = year;
         this.price = price;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 
     @Override
